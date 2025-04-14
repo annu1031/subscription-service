@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head><title>Test Razorpay Checkout</title></head>
+<body>
+  <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+  <script>
+    var options = {
+      "key": "rzp_test_vwhPl6Bttiko87", 
+      "amount": 999, 
+      "currency": "INR",
+      "name": "Test Subscription",
+      "description": "Demo Transaction",
+      "order_id": "order_QIeLkMuwGkxVlo", 
+      "handler": function (response){
+        alert("Payment Success. Payment ID: " + response.razorpay_payment_id);
+      },
+      "prefill": {
+        "name": "Test User",
+        "email": "test@example.com",
+        "contact": "9999999999"
+      },
+      "theme": {
+        "color": "#3399cc"
+      }
+    };
+    var rzp1 = new Razorpay(options);
+    rzp1.open();
+  </script>
+</body>
+</html>
