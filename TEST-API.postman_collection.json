@@ -1,0 +1,472 @@
+{
+	"info": {
+		"_postman_id": "06c1e43b-a189-4042-a9a7-af4c906af328",
+		"name": "TEST-API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "43698278",
+		"_collection_link": "https://annu-7834354.postman.co/workspace/Annu's-Workspace~f81cddec-669f-42d3-8199-36932a6cb8fc/collection/43698278-06c1e43b-a189-4042-a9a7-af4c906af328?action=share&source=collection_link&creator=43698278"
+	},
+	"item": [
+		{
+			"name": "card-API",
+			"item": [
+				{
+					"name": "New Request",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"userId\": \"u237\",\n  \"cardNumber\": \"4111111111111111\",\n  \"cardHolderName\": \"John Doe\",\n  \"expiryMonth\": 12,\n  \"expiryYear\": 2026\n}\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/cards",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"cards"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "New Request",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/cards?userId=u123",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"cards"
+							],
+							"query": [
+								{
+									"key": "userId",
+									"value": "u123"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "New Request",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/cards/a75cee79-75f1-4fb8-a265-9e5bd39a2319?userId=u123",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"cards",
+								"a75cee79-75f1-4fb8-a265-9e5bd39a2319"
+							],
+							"query": [
+								{
+									"key": "userId",
+									"value": "u123"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "New Request",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"userId\": \"u123\",\n  \"cardHolderName\": \"John D Updated\",\n  \"expiryMonth\": 10,\n  \"expiryYear\": 2027\n}\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/cards/a75cee79-75f1-4fb8-a265-9e5bd39a2319",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"cards",
+								"a75cee79-75f1-4fb8-a265-9e5bd39a2319"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "New Request",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/cards/a75cee79-75f1-4fb8-a265-9e5bd39a2319?userId=u123",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"cards",
+								"a75cee79-75f1-4fb8-a265-9e5bd39a2319"
+							],
+							"query": [
+								{
+									"key": "userId",
+									"value": "u123"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "New Request",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/cards/56c1bdbd-d0d8-4652-a60b-1e16d5f2febc/default?userId=u123",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"cards",
+								"56c1bdbd-d0d8-4652-a60b-1e16d5f2febc",
+								"default"
+							],
+							"query": [
+								{
+									"key": "userId",
+									"value": "u123"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "New Request",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/cards/all?userId=u123",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"cards",
+								"all"
+							],
+							"query": [
+								{
+									"key": "userId",
+									"value": "u123"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "subscription-API",
+			"item": [
+				{
+					"name": "New Request",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/subscriptions/plans",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"subscriptions",
+								"plans"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "New Request",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/subscriptions/active?userId=u237",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"subscriptions",
+								"active"
+							],
+							"query": [
+								{
+									"key": "userId",
+									"value": "u237"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "New Request",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/subscriptions/history?userId=u237",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"subscriptions",
+								"history"
+							],
+							"query": [
+								{
+									"key": "userId",
+									"value": "u237"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "New Request",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"userId\": \"u237\",\n  \"productId\": \"prod-netflix-001\",\n  \"planId\": \"plan-001\",\n  \"cardId\": \"01c0336d-96ee-47f0-a18e-5560dc1ca487\",\n  \"paymentType\": \"monthly\",\n  \"autoRenewal\": true,\n  \"name\": \"Test user3\",\n  \"email\": \"test4@example.com\",\n  \"phone\": \"9876543217\"\n}\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/subscriptions",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"subscriptions"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "New Request",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/subscriptions/169c1975-1597-4b19-a773-9e0dc74e213e/stop?userId=u237",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"subscriptions",
+								"169c1975-1597-4b19-a773-9e0dc74e213e",
+								"stop"
+							],
+							"query": [
+								{
+									"key": "userId",
+									"value": "u237"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "New Request",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/subscriptions/169c1975-1597-4b19-a773-9e0dc74e213e/renew?userId=u237",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"subscriptions",
+								"169c1975-1597-4b19-a773-9e0dc74e213e",
+								"renew"
+							],
+							"query": [
+								{
+									"key": "userId",
+									"value": "u237"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Razorpay-Integration APIs",
+			"item": [
+				{
+					"name": "New Request",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/subscriptions/test-razorpay",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"subscriptions",
+								"test-razorpay"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "New Request",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"razorpay_payment_id\": \"pay_123456789\",\n    \"razorpay_order_id\": \"order_123456789\",\n    \"razorpay_signature\": \"signature123\",\n    \"razorpay_subscription_id\": \"sub_123456789\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/subscriptions/verify-payment",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"subscriptions",
+								"verify-payment"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "New Request",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "X-Razorpay-Signature",
+								"value": "\"signature123\"",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"event\": \"subscription.charged\",\n    \"payload\": {\n        \"subscription\": {\n            \"entity\": {\n                \"id\": \"sub_QJ3tPdXlXt2TlC\"\n            }\n        }\n    }\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/webhooks/razorpay?test_mode=true",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"webhooks",
+								"razorpay"
+							],
+							"query": [
+								{
+									"key": "test_mode",
+									"value": "true"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
